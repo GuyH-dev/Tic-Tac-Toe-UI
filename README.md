@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+# Tic-Tac-Toe Game UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This project is a real-time Tic-Tac-Toe game built with React and TypeScript.
+Two players can play against each other, making moves from different clients and seeing the game state updated in real-time.
+The game integrates with a NestJS backend for managing the game logic.
 
-## Available Scripts
+## Installation
+### Prerequisites
+- Node.js and npm
 
-In the project directory, you can run:
+### Steps
+1. Clone the repository.
+    ```sh
+    git clone https://github.com/GuyH-dev/Tic-Tac-Toe-UI.git
+   ```
+2. Install the dependencies.
+   ```bash
+   npm install
+   ```
 
-### `npm start`
+3. Start the development server.
+   ```bash
+    npm start
+    ```
+   
+4. Open the game in a web browser.
+    ```
+    http://localhost:3001
+    ```
+   (make sure your NestJS server is running on port 3000)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Components
+The project is structured into the following components:
+- **Player Registration**: The `PlayerRegistration` component provides a form for players to register with either 'X' or 'O'.
+- **Game Board**: The `GameBoard` component displays the game board, allows players to make moves, includes a restart button,
+and shows alerts for wins and draws.
+- **Context**: The `GameContext` provides the game state and functions to the rest of the app. It handles player registration,
+making moves, resetting the game, and error handling.
+- **App Component**: The main `App` component uses the `GameProvider` context and includes the `PlayerRegistration` and `GameBoard` components.
+- **CSS for Game Board**: The `GameBoard.css` file styles the game board and error messages.
